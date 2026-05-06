@@ -1,0 +1,572 @@
+/* шрифт */
+@font-face {
+    font-family: 'MyFont';
+    src: url('shrift/Chicoree\ Em.\ Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pacifico", cursive;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Pacifico", cursive;
+}
+
+
+
+.navigation .logo-nav .logo-text,
+.navigation .nav-menu .nav-link {
+    font-family: "Pacifico", cursive;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* цвета */
+    --white-color: #fff;
+    --pink-color: #cfae7d;
+    --blue-color: #cc9568;
+    --Xblue-color: #865228;
+    --gray-color: #f0c0de;
+    --back-color: #f3e1c5;
+    --black-color: #000000;
+    --light-pink-color: #c79974;
+    --dark-color: #744017;
+
+
+
+    /* размер шрифта */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.3rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+    --font-size-xxxl: 3.2rem;
+
+    /* выделение шрифта */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-big: 600;
+    --font-weight-verybig: 700;
+
+    /* радиус границ */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-krug: 50%;
+
+    /* макс ширина сайта */
+    --site-max-width: 1555px;
+}
+
+/* Стиль всего сайта */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+}
+
+.section-content {
+    margin: 0 auto;
+    padding: 0 100px;
+    max-width: var(--site-max-width);
+}
+
+.section-title, h1, h2, h3, h4, h5, h6 {
+    font-family: "Pacifico", cursive;
+}
+
+.section-title {
+    text-align: center;
+    padding: 20px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xxl);
+}
+
+
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--Xblue-color);
+}
+
+/* Стиль нафигации */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: #3a1503;
+}
+
+header .navigation {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation .logo-text {
+    font-family: "Pacifico", cursive !important;
+}
+
+
+
+.navigation .logo-nav .logo-text {
+    color: var(--white-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-verybig);
+}
+
+.navigation .nav-menu {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+.navigation .nav-menu .nav-link {
+    padding: 13px 7px;
+    color: var(--white-color);
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-m);
+    transition: 0.4s ease;
+}
+
+.navigation .nav-menu .nav-link:hover {
+    color: var(--pink-color);
+    background: var(--back-color);
+}
+
+
+.hero-section {
+    min-height: 100vh;
+    background: #4e2006;
+}
+
+.hero-section .section-content {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--blue-color);
+    justify-content: space-between;
+
+
+}
+
+.hero-section .hero-details .title {
+    font-size: var(--font-size-xxxl);
+    color: var(--Xblue-color);
+    font-family: "Pacifico", sans-serif;
+}
+
+.hero-section .hero-details .subtitle {
+    margin-top: 8px;
+    max-width: 70%;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-big);
+}
+
+.hero-section .hero-details .description {
+    max-width: 70%;
+    margin: 23px 0 40px;
+    font-weight: var(--font-weight-big);
+    font-size: var(--font-size-l);
+
+    
+}
+
+.hero-section .hero-details .buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-section .hero-details .button {
+    padding: 10px 26px;
+    border: 2px solid transparent;
+    color: var(--back-color);
+    border-radius: var(--border-radius-m);
+    background: var(--blue-color);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-m);
+    transition: 0.4s ease;
+}
+
+.hero-section .hero-details .button:hover {
+    color: var(--white-color);
+    border-color: var(--white-color);
+    background: transparent;
+}
+
+.hero-section .hero-images-wrapper {
+    max-width: 900;
+    margin-right: 400px;
+}
+
+.hero-section .hero-image {
+    max-width: 200;
+    margin-right: 700px;
+}
+
+.hero-section .title {
+    font-family: "Pacifico", cursive !important;
+}
+
+/* вкладка о нас стиль */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('imag/krupnym-planom-ocarovatel-nyi-kotenok-spasii-v-odeale.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.about-section .section-content {
+    width: 800px;
+    min-height: 700px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.315);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: var(--dark-color);
+    display: flex;
+    margin-right: 170px;
+    font-size: 20px;
+}
+
+.about-section .text {
+    font-size: 24px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    text-align: justify;
+    max-width: 700px;
+    text-align: center;
+}
+
+/* вкладка меня стиль */
+.menu-section {
+    color: var(--dark-color);
+    background: var(--dark-color);
+    padding: 50px 0 100px;
+}
+
+.menu-section .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0 100px;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-section .text {
+    font-size: 120px;
+    line-height: 1.4;
+    text-align: Center;
+    max-width: 700px;
+}
+
+.menu-section .menu-list .menu-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% / 3 - 110px);
+}
+
+.menu-section .menu-list .menu-item .menu-image {
+    max-width: 83%;
+    aspect-ratio: 1;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.menu-section .menu-list .menu-item .name {
+    color: var(--dark-color);
+    margin: 12px 0;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-normal);
+}
+
+.menu-section .menu-list .menu-item .text {
+    font-size: var(--font-size-m);
+}
+
+/* стиль для персонала */
+.personal-selection {
+    padding: 120px 0;
+    background: #cc9568;
+    margin: 0;
+    width: 100%;
+}
+
+.personal-selection .selection-title {
+    color: var(--back-color);
+    padding: 100px 0 70px;
+    text-align: center;
+    font-size: var(--font-size-xxl);
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 60px;
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    width: 100%;
+}
+
+.sliders {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slide {
+    flex: 0 0 calc(33.333% - 20px);
+    background: #f3e1c559;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    display: none;
+    height: 342px;
+    list-style: none;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide.active {
+    display: flex;
+    opacity: 1;
+}
+
+.slide img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.slide h3 {
+    margin: 10px 0;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--blue-color);
+    border: none;
+    padding: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.slider-button:hover {
+    background: var(--blue-color);
+}
+
+.slider-button.prev {
+    left: 36px;
+}
+
+.slider-button.next {
+    right: 36px;
+}
+
+.slider-button img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    opacity: 1;
+}
+
+/* стиль для галереи */
+.gallery-section {
+    padding: 80px 0 100px;
+}
+
+.section-title {
+    text-align: center;
+    padding: 20px 0 20px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xxl);
+}
+
+.gallery-section .gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.gallery-section .gallery-list .gallery-item {
+    width: calc(100% / 3 - 32px);
+    border-radius: var(--border-radius-s);
+    overflow: hidden;
+    position: relative;
+}
+
+/* сама картинка */
+.gallery-section .gallery-list .gallery-item .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-section .gallery-list .gallery-item:hover .gallery-image {
+    transform: scale(1.1);
+}
+
+/* стиль для связь с нами */
+.contact-section {
+    padding: 60px 0;
+    background: var(--light-pink-color);
+}
+
+.contact-section .section-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: var(--site-max-width);
+}
+
+.contact-section .section-title {
+    padding: 30px 0 120px;
+    color: var(--back-color);
+}
+
+.contact-section .contact-info-list .contact-info {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    align-items: center;
+
+}
+
+.contact-section .cantact-info-list .contact-info p {
+    color: var(--back-color);
+    font-size: var(--font-size-m);
+}
+
+.contact-section .contact-form .form-input {
+    width: 100%;
+    height: 50px;
+    padding: 0 13px;
+    outline: none;
+    margin-bottom: 16px;
+    background: var(--light-pink-color);
+    border-radius: 20px;
+    border: 3px solid var(--back-color);
+}
+
+.contact-section .contact-form {
+    max-width: 50%;
+}
+
+.contact-section .contact-info-list {
+    flex: 1 1 45%;
+}
+
+.contact-section .contact-form .form-input:focus {
+    border-color: var(--back-color);
+}
+
+.contact-section .contact-form textarea.form-input {
+    height: 100px;
+    padding: 12px;
+    resize: vertical;
+}
+
+.contact-section .contact-form .button {
+    padding: 10px;
+    color: var(--dark-color);
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-medium);
+    background: var(--back-color);
+    border-radius: var(--border-radius-m);
+    border: 1px solid var(--back-color);
+    transition: 0.3s ease;
+}
+
+.contact-section .contact-form .button:hover {
+    color: var(--back-color);
+    background: transparent;
+}
+
+/* для макс ширины пикселей */
+@media screen and (max-width: 900px) {
+    :root {
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+
+    .navigation .nav-menu {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: var(--white-color);
+    }
+
+    .navigation .nav-menu .nav-link {
+        color: var(--black-color);
+        display: block;
+        margin-top: 17px;
+        font-size: var(--font-size-l);
+    }
+}
