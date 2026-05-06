@@ -30,3 +30,4 @@ controls.forEach((control) => {
     });
 });
 show(currentIndex);
+
