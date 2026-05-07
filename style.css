@@ -35,9 +35,9 @@ html {
     --blue-color: #cc9568;
     --Xblue-color: #865228;
     --gray-color: #f0c0de;
-    --back-color: #f3e1c5;
+    --back-color: #f5e6d3;
     --black-color: #000000;
-    --light-pink-color: #c79974;
+    --light-pink-color: #bd8a61;
     --dark-color: #744017;
 
 
@@ -74,8 +74,16 @@ ul {
 a {
     text-decoration: none;
 }
-
-
+section {
+    width: 100%;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
 button {
     cursor: pointer;
     border: none;
@@ -120,7 +128,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 5;
-    background: #3a1503;
+    background: #a76d3dce;
 }
 
 header .navigation {
@@ -165,87 +173,112 @@ header .navigation {
 
 .hero-section {
     min-height: 100vh;
-    background: #4e2006;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
-
-.hero-section .section-content {
+.hero-top {
+    flex: 1.5;
+    background: #f5e6d3;
     display: flex;
     align-items: center;
-    min-height: 100vh;
-    color: var(--blue-color);
-    justify-content: space-between;
-
-
+    justify-content: center;
+    padding-top: 140px;
+    position: relative;
+    overflow: visible;
 }
-
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: 59px;
+}
+.hero-details {
+    text-align: center;
+    color: white;
+    padding: 80px 0;
+    margin-top: -60px;
+    background: transparent;
+}
+.hero-image {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+.hero-bottom {
+    flex: 1;
+    background: #cc9568;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-bottom .section-content {
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    padding: 0 100px;
+    width: 100%;
+}
 .hero-section .hero-details .title {
     font-size: var(--font-size-xxxl);
-    color: var(--Xblue-color);
+    color: var(--back-color);
     font-family: "Pacifico", sans-serif;
+    margin-bottom: 20px;
 }
 
 .hero-section .hero-details .subtitle {
     margin-top: 8px;
-    max-width: 70%;
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-big);
+    color: var(--back-color);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-section .hero-details .description {
     max-width: 70%;
-    margin: 23px 0 40px;
+    margin: 23px auto 40px;
     font-weight: var(--font-weight-big);
     font-size: var(--font-size-l);
-
-
+    color: var(--back-color);
 }
 
 .hero-section .hero-details .buttons {
     display: flex;
     gap: 20px;
+    justify-content: center;
 }
 
 .hero-section .hero-details .button {
     padding: 10px 26px;
     border: 2px solid transparent;
-    color: var(--back-color);
+    color: var(--dark-color);
     border-radius: var(--border-radius-m);
-    background: var(--blue-color);
+    background: var(--back-color);
     font-weight: var(--font-weight-medium);
     font-size: var(--font-size-m);
     transition: 0.4s ease;
 }
 
 .hero-section .hero-details .button:hover {
-    color: var(--white-color);
-    border-color: var(--white-color);
+    color: var(--back-color);
+    border-color: var(--back-color);
     background: transparent;
-}
-
-.hero-section .hero-images-wrapper {
-    max-width: 900;
-    margin-right: 400px;
-}
-
-.hero-section .hero-image {
-    max-width: 200;
-    margin-right: 700px;
-}
-
-.hero-section .title {
-    font-family: "Pacifico", cursive !important;
 }
 
 /* вкладка о нас стиль */
 .about-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
-    margin: 0;
+    display: flex;
+    align-items: center;
     background-image: url('imag/krupnym-planom-ocarovatel-nyi-kotenok-spasii-v-odeale.jpg');
     background-size: cover;
     background-position: center;
+    width: 100%;
 }
 
 .about-section .section-content {
@@ -273,9 +306,11 @@ header .navigation {
 
 /* вкладка меня стиль */
 .menu-section {
+    min-height: 100vh;
+    background: var(--light-pink-color);
+    padding: 80px 0;
+    width: 100%;
     color: var(--dark-color);
-    background: var(--dark-color);
-    padding: 50px 0 100px;
 }
 
 .menu-section .menu-list {
@@ -286,14 +321,12 @@ header .navigation {
     align-items: center;
     justify-content: space-between;
 }
-
 .menu-section .text {
     font-size: 120px;
     line-height: 1.4;
     text-align: Center;
     max-width: 700px;
 }
-
 .menu-section .menu-list .menu-item {
     display: flex;
     align-items: center;
@@ -302,35 +335,33 @@ header .navigation {
     justify-content: space-between;
     width: calc(100% / 3 - 110px);
 }
-
 .menu-section .menu-list .menu-item .menu-image {
     max-width: 83%;
     aspect-ratio: 1;
     margin-bottom: 15px;
     object-fit: contain;
 }
-
 .menu-section .menu-list .menu-item .name {
     color: var(--dark-color);
     margin: 12px 0;
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-normal);
 }
-
 .menu-section .menu-list .menu-item .text {
     font-size: var(--font-size-m);
+    color: wheat;
 }
 
 /* стиль для персонала */
 .personal-selection {
-    padding: 120px 0;
-    background: #cc9568;
-    margin: 0;
+    min-height: 100vh;
+    background: var(--back-color);
+    padding: 80px 0;
     width: 100%;
 }
 
 .personal-selection .selection-title {
-    color: var(--back-color);
+    color: var(--dark-color);
     padding: 100px 0 70px;
     text-align: center;
     font-size: var(--font-size-xxl);
@@ -358,7 +389,7 @@ header .navigation {
 
 .slide {
     flex: 0 0 calc(33.333% - 20px);
-    background: #f3e1c559;
+    background: #916f3959;
     border-radius: 20px;
     overflow: hidden;
     text-align: center;
@@ -393,7 +424,7 @@ header .navigation {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--blue-color);
+    background: #af874581;
     border: none;
     padding: 30px;
     border-radius: 50%;
@@ -427,9 +458,10 @@ header .navigation {
 
 /* стиль для галереи */
 .gallery-section {
-    padding: 80px 0 100px;
+    min-height: 100vh;
+    padding: 80px 0;
+    width: 100%;
 }
-
 .section-title {
     text-align: center;
     padding: 20px 0 20px;
@@ -465,8 +497,10 @@ header .navigation {
 
 /* стиль для связь с нами */
 .contact-section {
-    padding: 60px 0;
-    background: var(--light-pink-color);
+    min-height: 100vh;
+    background: var(--back-color);
+    padding: 180px 0;
+    width: 100%;
 }
 
 .contact-section .section-content {
@@ -479,7 +513,7 @@ header .navigation {
 
 .contact-section .section-title {
     padding: 30px 0 120px;
-    color: var(--back-color);
+    color: var(--dark-color);
 }
 
 .contact-section .contact-info-list .contact-info {
@@ -491,7 +525,7 @@ header .navigation {
 }
 
 .contact-section .cantact-info-list .contact-info p {
-    color: var(--back-color);
+    color: var(--dark-color);
     font-size: var(--font-size-m);
 }
 
@@ -501,9 +535,9 @@ header .navigation {
     padding: 0 13px;
     outline: none;
     margin-bottom: 16px;
-    background: var(--light-pink-color);
+    background: rgba(218, 184, 145, 0.836);
     border-radius: 20px;
-    border: 3px solid var(--back-color);
+    border: 3px solid rgba(218, 184, 145, 0.836);
 }
 
 .contact-section .contact-form {
@@ -515,7 +549,7 @@ header .navigation {
 }
 
 .contact-section .contact-form .form-input:focus {
-    border-color: var(--back-color);
+    border-color: rgba(218, 184, 145, 0.836);
 }
 
 .contact-section .contact-form textarea.form-input {
@@ -529,9 +563,9 @@ header .navigation {
     color: var(--dark-color);
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-medium);
-    background: var(--back-color);
+    background: rgba(212, 161, 102, 0.425);
     border-radius: var(--border-radius-m);
-    border: 1px solid var(--back-color);
+    border: 1px solid rgba(212, 161, 102, 0.692);
     transition: 0.3s ease;
 }
 
