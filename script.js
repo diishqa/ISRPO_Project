@@ -12,6 +12,7 @@ function show(index) {
     }
     currentIndex = index;
 }
+
 controls.forEach((control) => {
     control.addEventListener('click', (event) => {
         if (event.target.closest('.prev')) {
