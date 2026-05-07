@@ -12,6 +12,7 @@ function show(index) {
     }
     currentIndex = index;
 }
+//диана дура
 
 controls.forEach((control) => {
     control.addEventListener('click', (event) => {
