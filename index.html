@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/imag/icon.jpg">
 
-    
+
 </head>
+
 <body>
     <header>
         <nav class="navigation section-content">
@@ -30,7 +31,7 @@
                 <li class="nav-item">
                     <a href="#personal" class="nav-link">་⁺₊♡ Сотрудники ♡₊⁺་</a>
 
-                    
+
                 </li>
                 <li class="nav-item">
                     <a href="#gallery1" class="nav-link">་⁺₊♡ Галерея ♡₊⁺་</a>
@@ -187,7 +188,35 @@
                         </ul>
                     </div>
                 </section>
-
+                <section class="Booking-section">
+                    <div class="wrapper">
+                        <h1 class = "booking_h1">Забронировать столик</h1>
+                        <form id="bookingForm">
+                            <div class="inputbox">
+                                <input type="text" id="name" placeholder="ФИО" required>
+                            </div>
+                            <div class="inputbox">
+                                <input type="tel" id="phone" placeholder="Номер телефона" required>
+                            </div>
+                            <div class="inputbox">
+                                <input type="date" id="date" required>
+                            </div>
+                            <div class="inputbox">
+                                <input type="time" id="time" required>
+                            </div>
+                            <div class="inputbox">
+                                <input type="number" id="tableId" placeholder="Номер столика" required>
+                            </div>
+                            <button type="submit" class="button_booking" id ="createBookingBtn">
+                                ♡ Отправить ♡
+                            </button>
+                        </form>
+                        <button type="submit" id="showBookingsBtn" class="button_booking">
+                            Посмотреть бронирования
+                        </button>
+                        <div id="message"></div>
+                    </div>
+                </section>
                 <!-- связь с нами -->
                 <section class="contact-section" , id="contact">
                     <h2 class="section-title">𓂃܀𓈒❀ Связь с нами ❀𓈒܀𓂃</h2>
@@ -218,19 +247,18 @@
                                 <p>☾ Закрыты: Суббота - Воскресенье</p>
                             </li>
                         </ul>
-
-                        <form action="#" class="contact-form">
+                        <!-- <form action="#" class="contact-form">
                             <input type="text" placeholder="Ваше имя" class="form-input" required>
                             <input type="email" placeholder="Ваша почта" class="form-input" required>
                             <textarea placeholder="Ваше сообщение" class="form-input"></textarea>
                             <button class="button">♡Отправить♡</button>
-                        </form>
+                        </form> -->
                     </div>
             </selection>
             </div>
 
     </main>
-<script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="booking.js"></script>
 </body>
-
 </html>
