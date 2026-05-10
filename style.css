@@ -137,22 +137,26 @@ header .navigation {
     align-items: center;
     justify-content: space-between;
 }
-
+.navigation .logo-nav {
+    flex-shrink: 0;
+    margin-right: auto; 
+}
 .navigation .logo-text {
     font-family: "Pacifico", cursive !important;
+    padding-right: 20px;
 }
-
-
 
 .navigation .logo-nav .logo-text {
     color: var(--white-color);
-    font-size: var(--font-size-xl);
+    font-size: 28px;
     font-weight: var(--font-weight-verybig);
+    line-height: 1;
 }
 
 .navigation .nav-menu {
     display: flex;
-    gap: 10px;
+    gap: 5px;
+    margin-left: auto;
 }
 
 
@@ -163,6 +167,7 @@ header .navigation {
     font-size: var(--font-size-m);
     border-radius: var(--border-radius-m);
     transition: 0.4s ease;
+    white-space: nowrap;
 }
 
 .navigation .nav-menu .nav-link:hover {
@@ -500,38 +505,55 @@ header .navigation {
 
 /* стиль для связь с нами */
 .contact-section {
-    min-height: 100vh;
-    background: var(--back-color);
-    padding: 180px 0;
+    padding: 60px 0 80px;
+    background: var(--light-pink-color);
     width: 100%;
 }
-
 .contact-section .section-content {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     align-items: flex-start;
     justify-content: space-between;
     max-width: var(--site-max-width);
+    margin: 0 auto;
+    padding: 0 100px;
+    flex-wrap: wrap;
 }
-
 .contact-section .section-title {
-    padding: 30px 0 120px;
-    color: var(--dark-color);
+    text-align: center;
+    padding: 0 0 50px;
+    color: #5f3412;
+    font-size: var(--font-size-xxl);
 }
-
+.contact-section .cantact-info-list {
+    flex: 1;
+    min-width: 280px;
+}
 .contact-section .contact-info-list .contact-info {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     margin: 20px 0;
     align-items: center;
-
 }
-
 .contact-section .cantact-info-list .contact-info p {
-    color: var(--dark-color);
+    color: #5f3412;
     font-size: var(--font-size-m);
+    margin: 0;
 }
-
+/* .contact-section .contact-form .form-input {
+    width: 100%;
+    height: 50px;
+    padding: 0 13px;
+    outline: none;
+    margin-bottom: 16px;
+    background: rgba(218, 184, 145, 0.836);
+    border-radius: 20px;
+    border: 3px solid rgba(218, 184, 145, 0.836);
+}
+.contact-section .contact-form {
+    flex: 1;
+    max-width: 50%;
+}
 .contact-section .contact-form .form-input {
     width: 100%;
     height: 50px;
@@ -542,19 +564,6 @@ header .navigation {
     border-radius: 20px;
     border: 3px solid rgba(218, 184, 145, 0.836);
 }
-
-.contact-section .contact-form {
-    max-width: 50%;
-}
-
-.contact-section .contact-info-list {
-    flex: 1 1 45%;
-}
-
-.contact-section .contact-form .form-input:focus {
-    border-color: rgba(218, 184, 145, 0.836);
-}
-
 .contact-section .contact-form textarea.form-input {
     height: 100px;
     padding: 12px;
@@ -563,7 +572,7 @@ header .navigation {
 
 .contact-section .contact-form .button {
     padding: 10px;
-    color: var(--dark-color);
+    color: #5f3412;
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-medium);
     background: rgba(212, 161, 102, 0.425);
@@ -575,7 +584,7 @@ header .navigation {
 .contact-section .contact-form .button:hover {
     color: var(--back-color);
     background: transparent;
-}
+} */
 
 /* для макс ширины пикселей */
 @media screen and (max-width: 900px) {
@@ -612,7 +621,7 @@ header .navigation {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #f5e6d3;
+    background: var(--back-color);;
 
 }
 .wrapper {
