@@ -39,7 +39,12 @@ async function CreateBooking() {
         alert("ошибка подключения к серверу");
     }
 }
-createBookingBtn.addEventListener("click", CreateBooking);
+document.getElementById("bookingForm")
+.addEventListener("submit", function(e)
+{
+    e.preventDefault();
+    CreateBooking();
+});
 showBookingsBtn.addEventListener("click", async function () {
     const phone = prompt("Введите номер телефона");
     const response = await fetch(

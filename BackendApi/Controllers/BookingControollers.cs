@@ -50,7 +50,6 @@ public class BookingController : ControllerBase
             new { id = newBooking.Id },
             newBooking);
     }
-
     [HttpGet("phone/{phone}")]
     public async Task<ActionResult<IEnumerable<Booking>>> GetByPhone(string phone)
     {
